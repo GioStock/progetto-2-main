@@ -1,0 +1,22 @@
+
+
+.bgImg{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/immagine.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.container2{
+    align-items: center;
+    color: rgba(0, 0, 0, 0.767);
+}
+#immage{
+ display: flex;
+  
+  font-size:4rem;
+  color: rgba(0, 0, 0, 0.767);
+
+}

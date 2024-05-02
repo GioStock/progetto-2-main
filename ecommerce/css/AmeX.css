@@ -1,0 +1,108 @@
+#hero::after{
+
+    content: '';
+    display: block;
+    
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* absolute ha bisogno di coordinate */
+
+    width: 100%;
+    max-height: max-content;
+    background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(251, 251, 255, 0.542454481792717) 55%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+.nav-link{
+    color: aliceblue;
+}
+
+#cardPro{
+    width: 100%;
+    height: auto;
+}
+img.card{
+    max-width: 50%;
+    height: auto;
+}
+
+#logoutDiv{
+    
+    padding-left: 4rem;
+}
+h1{
+    font-size: 2rem;
+}
+
+/* #flash{
+    margin: 0 20rem 0 0;
+
+
+} */
+
+
+
+
+
+@media (max-width: 766px) {
+    .scrollingText{
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .scrollingText{
+            font-size: 1rem;
+        }
+    
+}
+
+
+@media (min-width: 992px) {
+    .navBar {
+            overflow: hidden;
+        }
+    
+        .scrollingText {
+            white-space: nowrap;
+            animation: scrollText 5s infinite;
+            /* Evita il wrapping del testo su più righe */
+    
+            /* Animazione di scorrimento del testo */
+        }
+    
+        /* Animazione CSS per lo scorrimento del testo */
+        @keyframes scrollText {
+            from {
+                transform: translateX(90%);
+            }
+    
+            /* Partenza dal bordo destro */
+            to {
+                transform: translateX(-90%);
+            }
+    
+            /* Arrivo al bordo sinistro */
+        }
+}
+
+
+@media (max-width: 1200px) {
+    #logoutDiv h1,h2{
+        display: none;
+    }
+
+    
+        
+}
+
+
+@media (min-width: 1201px) {
+    .textPiccolo{
+        display: none;
+    }
+}

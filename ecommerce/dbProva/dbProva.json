@@ -1,0 +1,257 @@
+{
+  "utenti": [
+    {
+      "id": "bf85",
+      "utente": {
+        "username": "sdsdasd",
+        "password": "Passowrd123!"
+      }
+    },
+    {
+      "id": "6d67",
+      "utente": {
+        "username": "ciaod",
+        "password": "Flauto234!"
+      }
+    },
+    {
+      "id": "759c",
+      "utente": null
+    },
+    {
+      "id": "6c88",
+      "utente": null
+    },
+    {
+      "id": "54da",
+      "utente": {
+        "username": "simone",
+        "password": "Flauto123!"
+      }
+    },
+    {
+      "id": "36a9",
+      "utente": {
+        "username": "simone",
+        "password": "porno123!"
+      }
+    },
+    {
+      "id": "34ac",
+      "utente": {
+        "username": "simoner",
+        "password": "Pordcone123!"
+      }
+    },
+    {
+      "id": "44a1",
+      "utente": null
+    },
+    {
+      "id": "3399",
+      "utente": {
+        "username": "simone",
+        "password": "forza123!!"
+      }
+    },
+    {
+      "id": "f9b1",
+      "utente": {
+        "username": "sdasa",
+        "password": "Passowrd123!"
+      }
+    },
+    {
+      "id": "0395",
+      "utente": {
+        "username": "asdsadsa",
+        "password": "Passowrdd12!"
+      }
+    },
+    {
+      "id": "86b8",
+      "utente": {
+        "username": "simone",
+        "password": "Porcazzio123!"
+      }
+    },
+    {
+      "id": "adf1",
+      "utente": {
+        "username": "simone",
+        "password": "Forzaroma!!2"
+      }
+    },
+    {
+      "id": "126f",
+      "utente": {
+        "username": "simone",
+        "password": "Flau21321!!!"
+      }
+    },
+    {
+      "id": "dc39",
+      "utente": {
+        "username": "simone",
+        "password": "!simonedf34"
+      }
+    },
+    {
+      "id": "5061",
+      "utente": {
+        "username": "simone",
+        "password": "Flauto122!"
+      }
+    },
+    {
+      "id": "cc7a",
+      "utente": {
+        "username": "pippoo",
+        "password": "Ciao123@!"
+      }
+    },
+    {
+      "id": "dfcd",
+      "utente": {
+        "username": "pippooo",
+        "password": "Ciao1234@@@"
+      }
+    },
+    {
+      "id": "c427",
+      "utente": {
+        "username": "armandanodon",
+        "password": "Armandonod34@",
+        "carrello": [
+          "1",
+          "2",
+          "5",
+          "1",
+          null,
+          null,
+          null,
+          null,
+          "2",
+          null,
+          null,
+          null,
+          null,
+          "1",
+          null,
+          null,
+          null,
+          null,
+          "1",
+          null,
+          null,
+          null,
+          null,
+          "1",
+          null,
+          null,
+          null,
+          null,
+          "2",
+          null,
+          null,
+          null,
+          null,
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "An apple mobile which is nothing like apple",
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549"
+        ]
+      }
+    },
+    {
+      "id": "8ebf",
+      "utente": {
+        "username": "Ciaoone",
+        "password": "Ciao123@",
+        "carrello": [
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549"
+        ]
+      }
+    },
+    {
+      "id": "60d7",
+      "utente": {
+        "carrello": [
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549"
+        ]
+      }
+    },
+    {
+      "id": "1411",
+      "utente": {
+        "username": "Pippone",
+        "password": "Amico234@",
+        "carrello": []
+      }
+    },
+    {
+      "id": "c313",
+      "utente": {
+        "username": "Ciroooo",
+        "password": "Ciaso234@",
+        "carrello": []
+      }
+    },
+    {
+      "id": "dd5e",
+      "utente": {
+        "username": "siiddidi",
+        "password": "Ciao1244@",
+        "carrello": [
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549",
+          "3",
+          "Samsung Universe 9",
+          "https://cdn.dummyjson.com/product-images/3/1.jpg",
+          "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "1249",
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549",
+          "2",
+          "iPhone X",
+          "https://cdn.dummyjson.com/product-images/2/1.jpg",
+          "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "899",
+          "1",
+          "iPhone 9",
+          "https://cdn.dummyjson.com/product-images/1/1.jpg",
+          "An apple mobile which is nothing like apple",
+          "549"
+        ]
+      }
+    },
+    {
+      "id": "4801",
+      "utente": {
+        "carrello": [
+          "1"
+        ]
+      }
+    }
+  ]
+}
