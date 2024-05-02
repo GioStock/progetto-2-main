@@ -78,12 +78,12 @@ h1{
         /* Animazione CSS per lo scorrimento del testo */
         @keyframes scrollText {
             from {
-                transform: translateX(90%);
+                transform: translateX(80%);
             }
     
             /* Partenza dal bordo destro */
             to {
-                transform: translateX(-90%);
+                transform: translateX(-80%);
             }
     
             /* Arrivo al bordo sinistro */

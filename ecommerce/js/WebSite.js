@@ -17,7 +17,7 @@ function telefoni(telefono) {
                   <div class="card-body">
                       <h5 class="card-title" card-title="${prodotto.title}">${prodotto.title}</h5>
                       <p class="card-text" id="card-text">${prodotto.description}</p>
-                      <p class="card-price" id="card-price">${prodotto.price}</p>
+                      <p class="card-price" id="card-price">${prodotto.price}€</p>
                       <button class="aggiungi-carrello btn btn-primary" data-id="${prodotto.id}">Aggiungi al carrello</button>
                   </div>
               </div>
@@ -152,8 +152,7 @@ function showCarrello() {
     <div class="card-body">
     <h5 class="card-title" card-title="${prodotto.title}">${prodotto.title}</h5>
     <p class="card-text" id="card-text">${prodotto.description}</p>
-    <p class="card-price" id="card-price">${prodotto.price}</p>
-    <button class="aggiungi-carrello btn btn-primary" data-id="${prodotto.id}">Aggiungi al carrello</button>
+    <p class="card-price btn btn-danger" id="card-price">${prodotto.price}€</p>
     </div>
     </div>
     </div>
