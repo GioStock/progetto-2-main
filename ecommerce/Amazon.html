@@ -51,7 +51,10 @@
                                 <a class="nav-link active" aria-current="page" href="Amazon.html"><i class="bi bi-house"></i> Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="carrello.html"><i class="bi bi-cart"></i> Checkout</a>
+                                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="checkout"><i class="bi bi-cart"></i>
+    Checkout
+  </button>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
@@ -142,6 +145,24 @@
     
 
     <!-- </div> -->
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Carrello</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="elencoCarrelloPieno">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cardDelete">Svuota Carrello</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- TODO CHIUDERE IL MODAL NON NECESSARIO -->
   
     

@@ -31,47 +31,14 @@ function telefoni(telefono) {
         btn.addEventListener("click", function () {
           // Ottieni l'ID del prodotto dalla data attributo del bottone
           const prodottoId = this.getAttribute("data-id");
-          // Recupera il titolo del prodotto dalla card
-          const prodottoTitle =
-            this.closest(".swiper-slide").querySelector(
-              ".card-title"
-            ).textContent;
-          // Recupera l'immagine del prodotto dalla card
-          const prodottoImg = this.closest(".swiper-slide")
-            .querySelector(".card-img-top")
-            .getAttribute("src");
-          // Recupera la descrizione del prodotto dalla card
-          const prodottoDescription =
-            this.closest(".swiper-slide").querySelector(
-              ".card-text"
-            ).textContent;
-          // Recupera il prezzo del prodotto dalla card
-          const prodottoPrice =
-            this.closest(".swiper-slide").querySelector(
-              ".card-price"
-            ).textContent;
-
           // Esegui la logica per aggiungere il prodotto al carrello
-          aggiungiProdottoAlCarrello(
-            prodottoId,
-            prodottoTitle,
-            prodottoImg,
-            prodottoDescription,
-            prodottoPrice
-          );
-          
+          aggiungiProdottoAlCarrello(prodottoId);
         });
       });
     });
 }
 
-function aggiungiProdottoAlCarrello(
-  prodottoId,
-  prodottoTitle,
-  prodottoImg,
-  prodottoDescription,
-  prodottoPrice
-) {
+function aggiungiProdottoAlCarrello(prodottoId) {
   // Recupera il carrello dell'utente dal localStorage
   let utente = JSON.parse(localStorage.getItem("utente")) || { carrello: [] };
   // Aggiungi l'ID del prodotto al carrello dell'utente
@@ -84,7 +51,8 @@ function aggiungiProdottoAlCarrello(
       localStorage.setItem("utente", JSON.stringify(utente));
       // Esegui eventuali altre operazioni, come aggiornare l'interfaccia utente
       console.log(prodotto);
-      showCarrello();
+      //richiama la funzione 
+      // showCarrello();
     });
 }
 
@@ -137,28 +105,82 @@ loginProva.addEventListener("click", function () {
 });
 funzione();
 
-let ciaociao=document.getElementById('CIAOCIAO');
+
+
+let elencoCarrelloPieno = document.getElementById("elencoCarrelloPieno");
+
+let checkout = document.getElementById("checkout");
+checkout.addEventListener('click',showCarrello);
+
+
+/* -------------------------------------------------------------------------- */
+/*                                showCarrello                                */
+/* -------------------------------------------------------------------------- */
 function showCarrello() {
-  ciaociao.innerHTML="";
+  elencoCarrelloPieno.innerHTML = "";
   let carrelloPieno = localStorage.getItem("utente", "carrello");
   let JsonCarrelloPieno = JSON.parse(carrelloPieno);
   console.log(JsonCarrelloPieno);
+
   JsonCarrelloPieno.carrello.forEach((prodotto) => {
     console.log(prodotto);
     let prodottoCard = `
-    <div class="swiper-slide" id="cardPro${prodotto.id}">
+    <div class="swiper-slide" id="cardCarrello${prodotto.id}">
     <div class="card">
     <img src="${prodotto.images[0]}" class="card-img-top" id="card-img" alt="${prodotto.title}">
     <div class="card-body">
     <h5 class="card-title" card-title="${prodotto.title}">${prodotto.title}</h5>
     <p class="card-text" id="card-text">${prodotto.description}</p>
     <p class="card-price btn btn-danger" id="card-price">${prodotto.price}€</p>
+    <p><button class="rimuovi-prodotto btn btn-danger rimuovi-${prodotto.id}">Rimuovi</button></p>
     </div>
     </div>
     </div>
     `;
-    ciaociao.innerHTML+=prodottoCard;
-          
-          
+
+    elencoCarrelloPieno.innerHTML += prodottoCard;
+    // Aggiungi un listener per "Rimuovi" su tutti i pulsanti
+
+    let bottoni = document.querySelectorAll(`.rimuovi-${prodotto.id}`);
+    bottoni.forEach(bottone=>{
+      bottone.addEventListener("click", function () {
+        // Ottieni l'ID del prodotto dal data attributo del pulsante
+        // const prodottoId = this.getAttribute("id").split("-")[1];
+        // Rimuovi la carta corrispondente dall'HTML
+        let cardToRemove = document.getElementById(
+          `cardCarrello${prodotto.id}`
+        );
+        if (cardToRemove) {
+          cardToRemove.remove();
+          rimuoviProdottoDalCarrelloStorage(prodotto.id);
+          // Rimuovi il prodotto dal carrello nell'localStorage
+          // showCarrello();
+        }
+      });
+    });
+    
   });
+
+  
+
+  function rimuoviProdottoDalCarrelloStorage(prodottoId) {
+    // Recupera il carrello dell'utente dall'localStorage
+    let utente = JSON.parse(localStorage.getItem("utente")) || {
+      carrello: [],
+    };
+    // Rimuovi il prodotto dal carrello dell'utente
+    utente.carrello = utente.carrello.filter(
+      (prodotto) => prodotto.id !== prodottoId
+    );
+    // Aggiorna il carrello dell'utente nell'localStorage
+    localStorage.setItem("utente", JSON.stringify(utente));
+  }
+
+  // let cardDelete = document.getElementById("cardDelete");
+  // cardDelete.addEventListener('click',function(){
+  // JSON.parse(localStorage.getItem("utente"));
+  // localStorage.removeItem('utente','carrello');
+  // console.log("rimosso");
+  // elencoCarrelloPieno.innerHTML="";
+  // })
 }
