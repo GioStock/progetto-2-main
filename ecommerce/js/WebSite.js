@@ -13,7 +13,7 @@ function telefoni(telefono) {
         let card = `
           <div class="swiper-slide" id="cardPro${prodotto.id}">
               <div class="card">
-                  <img src="${prodotto.images[0]}" class="card-img-top" id="card-img" alt="${prodotto.title}">
+                  <div style="background-image: url(${prodotto.images[0]})" class="imgProd"></div>
                   <div class="card-body">
                       <h5 class="card-title" card-title="${prodotto.title}">${prodotto.title}</h5>
                       <p class="card-text" id="card-text">${prodotto.description}</p>
@@ -51,7 +51,7 @@ function aggiungiProdottoAlCarrello(prodottoId) {
       localStorage.setItem("utente", JSON.stringify(utente));
       // Esegui eventuali altre operazioni, come aggiornare l'interfaccia utente
       console.log(prodotto);
-      //richiama la funzione 
+      //richiama la funzione
       // showCarrello();
     });
 }
@@ -105,13 +105,10 @@ loginProva.addEventListener("click", function () {
 });
 funzione();
 
-
-
 let elencoCarrelloPieno = document.getElementById("elencoCarrelloPieno");
 
 let checkout = document.getElementById("checkout");
-checkout.addEventListener('click',showCarrello);
-
+checkout.addEventListener("click", showCarrello);
 
 /* -------------------------------------------------------------------------- */
 /*                                showCarrello                                */
@@ -125,14 +122,14 @@ function showCarrello() {
   JsonCarrelloPieno.carrello.forEach((prodotto) => {
     console.log(prodotto);
     let prodottoCard = `
-    <div class="swiper-slide" id="cardCarrello${prodotto.id}">
-    <div class="card">
-    <img src="${prodotto.images[0]}" class="card-img-top" id="card-img" alt="${prodotto.title}">
+    <div class="col-lg-6 mb-4" id="cardCarrello${prodotto.id}">
+    <div class="card h-100">
+    <div style="background-image: url(${prodotto.images[0]})" class="imgProd"></div>
     <div class="card-body">
     <h5 class="card-title" card-title="${prodotto.title}">${prodotto.title}</h5>
     <p class="card-text" id="card-text">${prodotto.description}</p>
     <p class="card-price btn btn-danger" id="card-price">${prodotto.price}€</p>
-    <p><button class="rimuovi-prodotto btn btn-danger rimuovi-${prodotto.id}">Rimuovi</button></p>
+    <p><button class="rimuovi-prodotto btn btn-danger" car-id=${prodotto.id}>Rimuovi</button></p>
     </div>
     </div>
     </div>
@@ -141,46 +138,26 @@ function showCarrello() {
     elencoCarrelloPieno.innerHTML += prodottoCard;
     // Aggiungi un listener per "Rimuovi" su tutti i pulsanti
 
-    let bottoni = document.querySelectorAll(`.rimuovi-${prodotto.id}`);
-    bottoni.forEach(bottone=>{
+    // Aggiungi un listener per "Rimuovi" su tutti i pulsanti
+
+    let bottoni = document.querySelectorAll(`.rimuovi-prodotto`);
+    bottoni.forEach((bottone) => {
       bottone.addEventListener("click", function () {
-        // Ottieni l'ID del prodotto dal data attributo del pulsante
-        // const prodottoId = this.getAttribute("id").split("-")[1];
-        // Rimuovi la carta corrispondente dall'HTML
-        let cardToRemove = document.getElementById(
-          `cardCarrello${prodotto.id}`
-        );
-        if (cardToRemove) {
-          cardToRemove.remove();
-          rimuoviProdottoDalCarrelloStorage(prodotto.id);
-          // Rimuovi il prodotto dal carrello nell'localStorage
-          // showCarrello();
-        }
+        let prodottoId = this.getAttribute("car-id");
+        rimuoviProdottoDalCarrelloStorage(prodottoId);
+        showCarrello();
       });
     });
-    
   });
+}
 
-  
-
-  function rimuoviProdottoDalCarrelloStorage(prodottoId) {
-    // Recupera il carrello dell'utente dall'localStorage
-    let utente = JSON.parse(localStorage.getItem("utente")) || {
-      carrello: [],
-    };
-    // Rimuovi il prodotto dal carrello dell'utente
-    utente.carrello = utente.carrello.filter(
-      (prodotto) => prodotto.id !== prodottoId
-    );
-    // Aggiorna il carrello dell'utente nell'localStorage
-    localStorage.setItem("utente", JSON.stringify(utente));
-  }
-
-  // let cardDelete = document.getElementById("cardDelete");
-  // cardDelete.addEventListener('click',function(){
-  // JSON.parse(localStorage.getItem("utente"));
-  // localStorage.removeItem('utente','carrello');
-  // console.log("rimosso");
-  // elencoCarrelloPieno.innerHTML="";
-  // })
+function rimuoviProdottoDalCarrelloStorage(prodottoId) {
+  // Recupera il carrello dell'utente dall'localStorage
+  let utente = JSON.parse(localStorage.getItem("utente")) || {
+    carrello: [],
+  };
+  // Rimuovi il prodotto dal carrello dell'utente
+  utente.carrello = utente.carrello.filter((c) => c.id != prodottoId);
+  // Aggiorna il carrello dell'utente nell'localStorage
+  localStorage.setItem("utente", JSON.stringify(utente));
 }
