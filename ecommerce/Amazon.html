@@ -9,27 +9,29 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/AmeX.css">
 </head>
 
 <body>
-    
+
     <div id="main-header" class="fixed-top row-8">
 
         <div class="bg-dark text-light d-flex justify-content-between align-items-center navBar">
             <div class="m-3" id="utenteBenvenuto">Benvenuto</div>
-            
-                <p class="mb-0 lead scrollingText ">TUTTO AL 50% - Articoli sempre in Saldo</p>
-            
+
+            <p class="mb-0 lead scrollingText">TUTTO AL 50% - Articoli sempre in Saldo</p>
+
             <ul class="list-unstyled gap-3 fs-5 d-flex pe-2">
                 <li> <i class="bi bi-instagram"></i> </li>
                 <li><i class="bi bi-facebook"></i></li>
                 <li><i class="bi bi-twitter"></i></li>
                 <li><i class="bi bi-pinterest"></i></li>
             </ul>
-        
-        
+
+
         </div>
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <!-- sostituto container-fluid con un container normale -->
@@ -48,20 +50,22 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="Amazon.html"><i class="bi bi-house"></i> Home</a>
+                                <a class="nav-link active" aria-current="page" href="Amazon.html"><i
+                                        class="bi bi-house"></i> Home</a>
                             </li>
                             <li class="nav-item">
                                 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="checkout"><i class="bi bi-cart"></i>
-    Checkout
-  </button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" id="checkout"><i class="bi bi-cart"></i>
+                                    Checkout
+                                </button>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <i class="bi bi-heart"></i> Lista Desideri
                                 </a>
-                                
+
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -69,7 +73,7 @@
                                     <i class="bi bi-chat-dots"></i> Info
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Chi siamo</a></li>
+                                    <li><a class="dropdown-item" href="chi-siamo.html">Chi siamo</a></li>
                                     <li><a class="dropdown-item" href="#">hai ancora bisogno di aiuto?</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
@@ -81,14 +85,16 @@
                         <form class="d-flex mt-3 mt-lg-0" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-light" type="submit">Search</button>
-                            <button  id="btnLogout" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button id="btnLogout" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
                                 logout
                             </button>
-                            <button  id="loginProva" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button id="loginProva" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
                                 Login
                             </button>
-                        </form> 
-                    
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -101,123 +107,155 @@
         <div class="hero-wrapper position-relative">
             <img src="img/cuffie.jpg" class="img-fluid" alt="">
 
-            <div  class="cta position-absolute top-50 start-0 z-1 ms-3" id="logoutDiv">
-                <h1  id="welcome" class="text-dark"></h1><br>
+            <div class="cta position-absolute top-50 start-0 z-1 ms-3" id="logoutDiv">
+                <h1 id="welcome" class="text-dark"></h1><br>
                 <h2> Cuffie X - Offerta Solo Per OGGI</h2>
                 <p class="textPiccolo">Offerta Solo Per OGGI!</p>
                 <div class="prezzo d-flex justify-content-end cta position-relative z-1 fs-3">499.99$</div>
                 <button class="btn btn-primary fs-3">Shop NOW</button>
-                
-                
-                
+
+
+
             </div>
         </div>
     </section>
 
 
-    
-    
+
+
     <section id="carousel">
         <!-- Slider main container -->
         <div class="swiper mt-5">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper" id="cardProdotto">
                 <!-- Slides -->
-                
-                
-                
-                
+
+
+
+
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-            
+
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            
+
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
     </section>
-    
-    
-        <div id="CIAOCIAO">x</div>
-    
+
 
     <!-- </div> -->
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Carrello</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row" id="elencoCarrelloPieno">
-                
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrello</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row" id="elencoCarrelloPieno">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cardDelete">Svuota Carrello</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="cardDelete">Svuota Carrello</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
+    <footer>
+        <div class="footerBody">
+            <div class="card text-center">
+                <div class="card-header d-flex justify-content-center align-items-center footHeader">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="Amazon.html"><i
+                                    class="bi bi-house"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="false">Menu</a>
+                        </li>
+                        <li>
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container-fluid">
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </nav>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="card-body cardFooter">
+                    <h5 class="card-title">Amex</h5>
+                    <p class="card-text">E-commerce di accessori Mobile</p>
+                    <img src="img/cuffie-footer.jpg" class="d-flex container-fluid" width="30">
+                    <a href="chi-siamo.html" class="btn btn-primary">Chi Siamo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- TODO CHIUDERE IL MODAL NON NECESSARIO -->
-  
-    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
         const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
 
-  slidesPerView: 1,
-      
+            slidesPerView: 1,
 
-      breakpoints: {
-        
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        992: {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-      },
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+            breakpoints: {
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-},
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
 
-// And if we need scrollbar
-scrollbar: {
-    el: '.swiper-scrollbar',
-},
-});
-</script>
-<script src="./js/WebSite.js"></script>
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+    <script src="./js/WebSite.js"></script>
 </body>
 
 </html>

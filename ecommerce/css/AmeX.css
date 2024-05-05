@@ -113,3 +113,17 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.footHeader {
+background-color: transparent;
+position: relative;
+}
+
+
+.cardFooter{
+    background: rgb(25, 23, 23);
+    color: aliceblue;
+    font-family: sans-serif;
+    font-size: x-large;
+}
