@@ -19,6 +19,10 @@ function telefoni(telefono) {
                       <p class="card-text" id="card-text">${prodotto.description}</p>
                       <p class="card-price" id="card-price">${prodotto.price}€</p>
                       <button class="aggiungi-carrello btn btn-primary" data-id="${prodotto.id}">Aggiungi al carrello</button>
+                      <a class="AggiungiADesideri" role="button">
+                         <i class="bi bi-heart"></i>
+                         </a>
+
                   </div>
               </div>
           </div>
@@ -53,7 +57,45 @@ function aggiungiProdottoAlCarrello(prodottoId) {
       console.log(prodotto);
       //richiama la funzione
       // showCarrello();
+
+      //whishlist
+      //////////ADD EVENT LISTENER BOTTONE LISTA DEI DESIDERI
+      document.querySelectorAll('.AggiungiADesideri').forEach(iconaCuore => {
+      iconaCuore.addEventListener('click', funzioneAggiungiADesideri);
+    })
+
     });
+
+    
+}
+
+/////////////FUNZIONE AGGIUNGI LISTA DESIDERI
+
+
+ let toastElementInterno = document.querySelector('.toast');
+ let toastElement = document.querySelector('.divToast');
+ let perStampaToast = document.getElementById('perStampaToast');
+function funzioneAggiungiADesideri (){
+  console.log("oddioooo");
+  console.log(toastElementInterno);
+  perStampaToast.style.display = "block";
+
+  // questa parte imposta la sparizione del "toast" dopo 3 secondi
+  setTimeout(() => {
+    toastElementInterno.style.display = "none";
+  }, 3000);
+//parte per stampare la carta nel modal Lista dei Desideri
+  let elCarta = event.target.closest('.swiper-slide');
+  let modalBody = document.querySelector('#listaDesideriModal .modal-body');
+  let cartaClonata = elCarta.cloneNode(true);
+  modalBody.appendChild(cartaClonata);
+
+  //nascondo l'icona del cuore dalla card stampata
+  let iconaCuoreClonata = cartaClonata.querySelector('.AggiungiADesideri');
+  iconaCuoreClonata.style.display = "none";
+
+  
+  
 }
 
 // Chiamata per ottenere e visualizzare i prodotti
